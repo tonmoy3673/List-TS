@@ -12,7 +12,7 @@ type SelectProps = {
 const Select = ({ options, value, onChange }: SelectProps) => {
   return <div>
     {/* ============== Container ================== */}
-    <div>
+    <div className="relative flex items-center ">
         {/* ============== Value ========= */}
         <span>
             Value
@@ -31,7 +31,7 @@ const Select = ({ options, value, onChange }: SelectProps) => {
         <ul>
             {
                 options.map((item)=>
-                    <li key={item.value}>{item?.label}</li>
+                    <li key={item.value} className="text-blue-500">{item?.label}</li>
                 )
             }
         </ul>
