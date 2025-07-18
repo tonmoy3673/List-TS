@@ -1,6 +1,6 @@
-type SelectOption = {
+export type SelectOption = {
   label: string;
-  value: string;
+  value: number;
 };
 
 type SelectProps = {
@@ -29,7 +29,11 @@ const Select = ({ options, value, onChange }: SelectProps) => {
         </div>
         {/* ============= Options ========== */}
         <ul>
-            
+            {
+                options.map((item)=>
+                    <li key={item.value}>{item?.label}</li>
+                )
+            }
         </ul>
     </div>
   </div>;
