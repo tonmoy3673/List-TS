@@ -26,7 +26,7 @@ const options = [
 const Item = () => {
     const [selectedOption,setSelectedOption]= useState<SelectOption| undefined>()
   return (
-    <div>
+    <div className="flex items-center justify-center">
       <Select options= {options} value={selectedOption} onChange={(val)=>setSelectedOption(val)}/>
     </div>
   );
